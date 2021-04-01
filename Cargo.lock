@@ -339,16 +339,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_game"
-version = "0.1.1"
-dependencies = [
- "bevy",
- "embed-resource",
- "game_plugin",
- "winit",
-]
-
-[[package]]
 name = "bevy_gltf"
 version = "0.4.0"
 source = "git+https://github.com/bevyengine/bevy/?rev=7a511394ac6c4f90b5398ab6333f1bd4fd665613#7a511394ac6c4f90b5398ab6333f1bd4fd665613"
@@ -2437,6 +2427,16 @@ name = "once_cell"
 version = "1.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "af8b08b04175473088b46763e51ee54da5f9a164bc162f615b91bc179dbf15a3"
+
+[[package]]
+name = "orbitale_echo_game"
+version = "0.1.1"
+dependencies = [
+ "bevy",
+ "embed-resource",
+ "game_plugin",
+ "winit",
+]
 
 [[package]]
 name = "owned_ttf_parser"
