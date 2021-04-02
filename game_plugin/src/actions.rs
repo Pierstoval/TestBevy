@@ -20,10 +20,10 @@ fn set_movement_actions(
     mut actions: ResMut<Actions>,
     keyboard_input: Res<Input<KeyCode>>,
 ) {
-    if keyboard_input.just_released(KeyCode::W)
-        || keyboard_input.pressed(KeyCode::W)
-        || keyboard_input.just_released(KeyCode::A)
-        || keyboard_input.pressed(KeyCode::A)
+    if keyboard_input.just_released(KeyCode::Z)
+        || keyboard_input.pressed(KeyCode::Z)
+        || keyboard_input.just_released(KeyCode::Q)
+        || keyboard_input.pressed(KeyCode::Q)
         || keyboard_input.just_released(KeyCode::S)
         || keyboard_input.pressed(KeyCode::S)
         || keyboard_input.just_released(KeyCode::D)
@@ -31,15 +31,15 @@ fn set_movement_actions(
     {
         let mut player_movement = Vec2::ZERO;
 
-        if keyboard_input.just_released(KeyCode::W) || keyboard_input.just_released(KeyCode::S) {
-            if keyboard_input.pressed(KeyCode::W) {
+        if keyboard_input.just_released(KeyCode::Z) || keyboard_input.just_released(KeyCode::S) {
+            if keyboard_input.pressed(KeyCode::Z) {
                 player_movement.y = 1.;
             } else if keyboard_input.pressed(KeyCode::S) {
                 player_movement.y = -1.;
             } else {
                 player_movement.y = 0.;
             }
-        } else if keyboard_input.just_pressed(KeyCode::W) {
+        } else if keyboard_input.just_pressed(KeyCode::Z) {
             player_movement.y = 1.;
         } else if keyboard_input.just_pressed(KeyCode::S) {
             player_movement.y = -1.;
@@ -47,17 +47,17 @@ fn set_movement_actions(
             player_movement.y = actions.player_movement.unwrap_or(Vec2::ZERO).y;
         }
 
-        if keyboard_input.just_released(KeyCode::D) || keyboard_input.just_released(KeyCode::A) {
+        if keyboard_input.just_released(KeyCode::D) || keyboard_input.just_released(KeyCode::Q) {
             if keyboard_input.pressed(KeyCode::D) {
                 player_movement.x = 1.;
-            } else if keyboard_input.pressed(KeyCode::A) {
+            } else if keyboard_input.pressed(KeyCode::Q) {
                 player_movement.x = -1.;
             } else {
                 player_movement.x = 0.;
             }
         } else if keyboard_input.just_pressed(KeyCode::D) {
             player_movement.x = 1.;
-        } else if keyboard_input.just_pressed(KeyCode::A) {
+        } else if keyboard_input.just_pressed(KeyCode::Q) {
             player_movement.x = -1.;
         } else {
             player_movement.x = actions.player_movement.unwrap_or(Vec2::ZERO).x;
