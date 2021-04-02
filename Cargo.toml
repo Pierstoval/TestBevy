@@ -8,7 +8,9 @@ edition = "2018"
 
 [features]
 default = [
+    "bevy/bevy_audio",
     "bevy/bevy_gltf",
+    "bevy/bevy_gilrs",
     "bevy/bevy_winit",
     "bevy/render",
     "bevy/png",
